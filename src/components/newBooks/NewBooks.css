@@ -1,0 +1,102 @@
+.new {
+    padding: 60px 0;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.new-title {
+    font-family: "Montagu Slab", serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--title-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.new swiper-container {
+    margin-bottom: 20px;
+}
+
+.new swiper-container {
+    cursor: grab;
+}
+
+.new swiper-container:active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.new swiper-slide {
+    width: max-content;
+    background-color: var(--container-color);
+    border: 2px solid var(--border-color);
+    transition: border-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    grid-gap: 40px;
+    padding: 20px 60px 20px 20px;
+}
+
+.new swiper-slide:hover {
+    border-color: var(--text-color);
+}
+
+.new-img {
+    width: 100px;
+}
+
+.new__texts {
+    height: max-content;
+}
+
+.new__texts-title {
+    font-family: "Montagu Slab", serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--title-color);
+    text-align: center;   
+}
+
+.new__texts-price {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    margin: 5px 0 10px;
+}
+
+.new__texts-price .current-price {
+    font-weight: 500;
+    color: var(--title-color);
+    font-size: 15px;
+}
+
+.new__texts-price .old-price {
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.new__texts__stars {
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    grid-gap: 3px;
+}
+
+.new__texts__stars i {
+    color: var(--first-color);
+    font-size: 15px;
+}
+
+@media screen and (max-width: 550px) {
+    .new swiper-slide {
+       flex-direction: column;
+       padding: 20px 30px;
+    }
+
+    .new__texts-price,
+    .new__texts__stars {
+        justify-content: center;
+    }
+}

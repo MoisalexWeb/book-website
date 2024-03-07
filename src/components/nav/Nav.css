@@ -1,0 +1,86 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-color);
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.nav__container {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    grid-gap: 50px;
+}
+
+.nav-link {
+    color: var(--first-color);
+    display: flex;
+    grid-gap: 5px;
+    align-items: center;
+    font-weight: 500;
+}
+
+.nav-link i {
+    font-size: 20px;
+}
+
+.nav__menu {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    grid-gap: 20px;
+    justify-self: end;
+}
+
+.nav__menu-link {
+    color: var(--text-color);
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+.nav__menu-link:hover {
+    color: var(--first-color);
+}
+
+.nav__buttons {
+    display: flex;
+    align-items: center;
+    grid-gap: 15px;
+}
+
+.nav__buttons-btn {
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav__buttons-btn i {
+    pointer-events: none;
+}
+
+.nav__buttons-btn:hover {
+    color: var(--first-color);
+}
+
+@media screen and (max-width: 920px) {
+    .nav__menu {
+        display: none;
+    }
+
+    .nav__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
